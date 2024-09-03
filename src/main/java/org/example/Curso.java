@@ -7,9 +7,7 @@ public class Curso {
     private int numeroCreditos;
     private String version;
 
-    public Curso() {
-    }
-
+    // Constructor
     public Curso(int id, String nombre, String descripcion, int numeroCreditos, String version) {
         this.id = id;
         this.nombre = nombre;
@@ -18,6 +16,7 @@ public class Curso {
         this.version = version;
     }
 
+    // Getters y Setters
     public int getId() {
         return id;
     }
@@ -56,5 +55,17 @@ public class Curso {
 
     public void setVersion(String version) {
         this.version = version;
+    }
+
+    // Sobrescribir toString() para una salida más legible
+    @Override
+    public String toString() {
+        return "Curso{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                ", numeroCreditos=" + numeroCreditos +
+                ", version='" + version + '\'' +
+                '}';
     }
 }
